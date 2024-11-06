@@ -34,14 +34,14 @@ while True:
     prawdopodobienstwa.append(prawdopodobienstwo)
 
     
-    if 0.412 < prawdopodobienstwo < 0.414:
+    if 0.413116 < prawdopodobienstwo < 0.413943:
         break
 
 plt.figure(figsize=(12, 6))
 
 plt.plot(licznik_eksperymentow, prawdopodobienstwa, color='purple', label='Prawdopodobieństwo')
-plt.axhline(y=0.412, color='red', linestyle='--', label='y = 0.412')
-plt.axhline(y=0.414, color='green', linestyle='--', label='y = 0.414')
+plt.axhline(y=0.413116, color='red', linestyle='--', label='y1 = 0.413116')
+plt.axhline(y=0.413943, color='green', linestyle='--', label='y2 = 0.413943')
 plt.xlabel('Liczba eksperymentów')
 plt.ylabel('Prawdopodobieństwo')
 plt.title('Zależność prawdopodobieństwa od mocy zbioru Omega')
