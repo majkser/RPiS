@@ -9,6 +9,7 @@ prawdopodobienstwo = 0
 licznik_eksperymentow = []
 prawdopodobienstwa = []
 
+theoretical_probability = (39/52)*(38/51)*(37/50)
 while True:
     for i in range (3):
         wylosowana_karta = random.randint(1, 52)    
@@ -42,6 +43,7 @@ plt.figure(figsize=(12, 6))
 plt.plot(licznik_eksperymentow, prawdopodobienstwa, color='purple', label='Prawdopodobieństwo')
 plt.axhline(y=0.413116, color='red', linestyle='--', label='y1 = 0.413116')
 plt.axhline(y=0.413943, color='green', linestyle='--', label='y2 = 0.413943')
+plt.axhline(y=theoretical_probability, color='blue', linestyle='dotted', label='y3 = theoretical_probability')
 plt.xlabel('Liczba eksperymentów')
 plt.ylabel('Prawdopodobieństwo')
 plt.title('Zależność prawdopodobieństwa od mocy zbioru Omega')
