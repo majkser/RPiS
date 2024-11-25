@@ -23,4 +23,21 @@ def generator (n):
         
     return list
 
-print(generator(1000))
+plt.figure(figsize=(12, 6))
+for n_samples in [10**3, 10**5]:
+
+    samples = generator(n_samples)
+    
+    x = np.linspace(-1, 3, 1000)
+    y = [functions(xi) for xi in x]
+    
+    plt.hist(samples, bins=50, density=True, alpha=0.5, label=f'Histogram (n={n_samples})')
+
+    plt.plot(x, y, 'r-', label='Teoretyczna FGP', linewidth=3)
+
+    plt.title("Porównanie histogramu i teoretycznej funkcji gęstości")
+    plt.xlabel("x")
+    plt.ylabel("Gęstość prawdopodobieństwa")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
